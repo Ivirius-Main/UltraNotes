@@ -4,22 +4,40 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Background="{ThemeResource SolidBackgroundFillColorBaseBrush}"
+    Background="Transparent"
+    xmlns:toolkit="using:CommunityToolkit.WinUI.UI.Controls"
     mc:Ignorable="d">
 
     <Grid x:Name="ContentArea">
         <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <TextBlock
-            Grid.Row="0"
-            x:Uid="Main_Title"
-            Style="{StaticResource PageTitleStyle}" />
-
-        <Grid Grid.Row="1">
-            
+        <Grid Grid.Row="0">
+            <RelativePanel>
+                <toolkit:TabbedCommandBar
+                    x:Name="ribbon"
+                    Background="Transparent">
+                    <toolkit:TabbedCommandBar.MenuItems>
+                        <toolkit:TabbedCommandBarItem Header="Home" Background="Transparent">
+                            <AppBarElementContainer>
+                                <StackPanel CornerRadius="4" Padding="5" Orientation="Horizontal" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}">
+                                    <ToggleButton Background="Transparent" BorderBrush="Transparent" BorderThickness="0" >
+                                        <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE8DD;" />
+                                    </ToggleButton>
+                                    <ToggleButton Background="Transparent" BorderBrush="Transparent" BorderThickness="0" >
+                                        <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE8DB;" />
+                                    </ToggleButton>
+                                    <ToggleButton Background="Transparent" BorderBrush="Transparent" BorderThickness="0" >
+                                        <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE8DC;" />
+                                    </ToggleButton>
+                                </StackPanel>
+                            </AppBarElementContainer>
+                        </toolkit:TabbedCommandBarItem>
+                    </toolkit:TabbedCommandBar.MenuItems>
+                </toolkit:TabbedCommandBar>
+                <RichEditBox x:Name="editor" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="ribbon" RelativePanel.AlignBottomWithPanel="True"/>
+            </RelativePanel>
         </Grid>
         
     </Grid>

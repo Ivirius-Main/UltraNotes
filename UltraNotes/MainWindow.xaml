@@ -10,7 +10,14 @@
     MinHeight="500"
     PersistenceId="MainWindow"
     mc:Ignorable="d">
-    <Window.SystemBackdrop>
-        <MicaBackdrop/>
-    </Window.SystemBackdrop>
+    <Grid>
+        <TabView Background="{x:Null}" BorderBrush="{x:Null}" x:Name="TabbedView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" AddTabButtonClick="TabbedView_AddTabButtonClick" Margin="0, 8, 0, 0" TabCloseRequested="TabbedView_TabCloseRequested">
+            <TabView.TabStripHeader>
+                <Border MinWidth="10" Height="40"/>
+            </TabView.TabStripHeader>
+            <TabView.TabStripFooter>
+                <Border x:Name="AppTitleBar" MinWidth="200" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="40" Margin="0, -8, 0, 0"/>
+            </TabView.TabStripFooter>
+        </TabView>
+    </Grid>
 </windowex:WindowEx>
