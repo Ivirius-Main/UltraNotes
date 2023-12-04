@@ -22,13 +22,13 @@
                         <toolkit:TabbedCommandBarItem Header="Home" Background="Transparent">
                             <AppBarElementContainer>
                                 <StackPanel CornerRadius="4" Padding="5" Orientation="Horizontal" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}">
-                                    <ToggleButton Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Style="{StaticResource CrimsonToggleButton}" Click="BoldButton_Click">
+                                    <ToggleButton Style="{StaticResource CrimsonToggleButton}" Click="BoldButton_Click">
                                         <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE8DD;" />
                                     </ToggleButton>
-                                    <ToggleButton Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Style="{StaticResource CrimsonToggleButton}" Click="ItalicButton_Click">
+                                    <ToggleButton Style="{StaticResource CrimsonToggleButton}" Click="ItalicButton_Click">
                                         <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE8DB;" />
                                     </ToggleButton>
-                                    <ToggleButton Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Style="{StaticResource CrimsonToggleButton}" Click="UnderlineButton_Click">
+                                    <ToggleButton Style="{StaticResource CrimsonToggleButton}" Click="UnderlineButton_Click">
                                         <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE8DC;" />
                                     </ToggleButton>
                                 </StackPanel>
@@ -36,7 +36,7 @@
                         </toolkit:TabbedCommandBarItem>
                     </toolkit:TabbedCommandBar.MenuItems>
                 </toolkit:TabbedCommandBar>
-                <RichEditBox x:Name="editor" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="ribbon" RelativePanel.AlignBottomWithPanel="True"/>
+                <RichEditBox x:Name="editor" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="ribbon" RelativePanel.AlignBottomWithPanel="True" Padding="5" Style="{StaticResource CrimsonRichEditBox}"/>
             </RelativePanel>
         </Grid>
         

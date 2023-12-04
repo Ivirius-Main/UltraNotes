@@ -95,6 +95,8 @@ public partial class App : Application
     {
         base.OnLaunched(args);
 
+        Application.Current.FocusVisualKind = FocusVisualKind.Reveal;
+
         App.GetService<IAppNotificationService>().Show(string.Format("AppNotificationSamplePayload".GetLocalized(), AppContext.BaseDirectory));
 
         await App.GetService<IActivationService>().ActivateAsync(args);
